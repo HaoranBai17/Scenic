@@ -11,7 +11,7 @@
 # cone = Cone at 1 @ 1
 # wheel = Car_wheel at 0 @ 0, facing toward 2 @ 2
 
-from scenic.simulators.gazebo.gazebo_models import *
+from scenic.simulators.gazebo.gazebo_models import Sun, Ramp, FlatSurface
 ego = Sun at 6 @ 3
 start_point = 0 @ 1
 ramp0 = Ramp at start_point
