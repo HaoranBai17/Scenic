@@ -1,6 +1,5 @@
-from jinja2 import Environment, PackageLoader, select_autoescape
+from jinja2 import Environment, PackageLoader, select_autoescape, FileSystemLoader
 import os
-
 
 class Gazebo:
     # creates a dictionary of all objects in a scenario that do not yet have model files
@@ -24,7 +23,7 @@ class Gazebo:
 
         # load the template environment
         env = Environment(
-            loader=PackageLoader('templates', 'model_templates'),
+            loader=PackageLoader('scenic.simulators.gazebo.templates', 'model_templates'),
             autoescape=select_autoescape(['html', 'xml'])
         )
 
@@ -50,7 +49,7 @@ class Gazebo:
     def config(scene, world_name):
         # load the include block template
         env = Environment(
-            loader=PackageLoader('templates', 'model_templates'),
+            loader=PackageLoader('scenic.simulators.gazebo.templates', 'model_templates'),
             autoescape=select_autoescape(['html', 'xml'])
         )
         include_template = env.get_template('include_template')
@@ -59,12 +58,14 @@ class Gazebo:
         all_models = ''
         obj_num = 0
         for obj in scene.objects:
+            dict = obj.__dict__
+            print(dict)
             all_models += include_template.render(obj.__dict__, object_id=obj.model_name+'_'+str(obj_num)) + '\n\n'
             obj_num += 1
 
         # load the world template
         env = Environment(
-            loader=PackageLoader('templates', 'world_templates'),
+            loader=PackageLoader('scenic.simulators.gazebo.templates', 'world_templates'),
             autoescape=select_autoescape(['html', 'xml'])
         )
         world_template = env.get_template(world_name)
