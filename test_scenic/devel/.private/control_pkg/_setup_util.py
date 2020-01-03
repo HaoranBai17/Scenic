@@ -1,4 +1,4 @@
-#!/home/haoran17/miniconda3/bin/python
+#!/home/haoran17/miniconda3/envs/scenic/bin/python
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -263,7 +263,7 @@ if __name__ == '__main__':
             sys.exit(1)
 
         # environment at generation time
-        CMAKE_PREFIX_PATH = '/home/haoran17/test_scenic/devel;/home/haoran17/test_script/devel;/home/haoran17/mybot_ws/devel;/home/haoran17/hrb_ws/devel;/home/haoran17/catkin_ws/devel;/opt/ros/indigo'.split(';')
+        CMAKE_PREFIX_PATH = '/home/haoran17/Scenic/test_scenic/devel;/home/haoran17/test_script/devel;/home/haoran17/mybot_ws/devel;/home/haoran17/hrb_ws/devel;/home/haoran17/catkin_ws/devel;/opt/ros/indigo'.split(';')
         # prepend current workspace if not already part of CPP
         base_path = os.path.dirname(__file__)
         if base_path not in CMAKE_PREFIX_PATH:

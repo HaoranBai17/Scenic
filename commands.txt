@@ -34,38 +34,12 @@ pip install .
 
 python run_scenic.py -sc examples/gazebo/rampwithobs.sc -world examples/gazebo/outputs/out.workd -template basic_world
 
-cd ~
-
-mkdir test_scenic
-
 cd test_scenic
-
-catkin init
-
-mkdir src
 
 catkin build
 
 // add "source ~/test_scenic/devel/setup.bash" to bashrc
 echo "source ~/test_scenic/devel/setup.bash" >> ~/.bashrc
-
-source ~/.bashrc
-
-cd src
-
-catkin_create_pkg control_pkg
-
-cd control_pkg
-
-mkdir scripts
-
-cp ~/Scenic/scripts/obstacle_avoi_example.py scripts/
-
-cd ..
-
-cd ..
-
-catkin build
 
 source ~/.bashrc
 
