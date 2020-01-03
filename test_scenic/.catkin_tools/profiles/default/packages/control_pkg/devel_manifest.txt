@@ -1,0 +1,4 @@
+control_pkg
+/home/haoran17/test_scenic/devel/.private/control_pkg/lib/pkgconfig/control_pkg.pc /home/haoran17/test_scenic/devel/lib/pkgconfig/control_pkg.pc
+/home/haoran17/test_scenic/devel/.private/control_pkg/share/control_pkg/cmake/control_pkgConfig.cmake /home/haoran17/test_scenic/devel/share/control_pkg/cmake/control_pkgConfig.cmake
+/home/haoran17/test_scenic/devel/.private/control_pkg/share/control_pkg/cmake/control_pkgConfig-version.cmake /home/haoran17/test_scenic/devel/share/control_pkg/cmake/control_pkgConfig-version.cmake
