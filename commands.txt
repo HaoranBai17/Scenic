@@ -47,6 +47,4 @@ roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/haoran17/tes
 
 rosrun control_pkg obstacle_avoi_example.py
 
-
 export SVGA_VGPU10=0
-
