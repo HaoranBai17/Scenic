@@ -1,2 +1,0 @@
-/home/haoran17/Scenic/test_scenic/devel/share/control_pkg/cmake/control_pkgConfig-version.cmake 2
-/home/haoran17/Scenic/test_scenic/devel/share/control_pkg/cmake/control_pkgConfig.cmake 2
